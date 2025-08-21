@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marie & Nikolai</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arapey">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="page-header">
+  <div class="header-center">
+    <h1>MARIE & NIKOLAI</h1>
+    <h2>wir heiraten.</h2>
+  </div>
+  <div class="header-right">
+    <img src="pictures/rightCorner.png" alt="Logo">
+  </div>
+</header>
+<div class="container">
+  <p>Bitte gib deinen Vornamen ein.</p>
+  <input type="text" id="vorname" placeholder="Dein Vorname" onkeydown="handleKeyPress(event)" style="color: whitesmoke"/>
+  <div id="last-name-container" style="display: none;">
+    <p>Bitte gib auch auch deinen Nachnamen ein:</p>
+    <input type="text" id="nachname" placeholder="Dein Nachname" onkeydown="handleKeyPress(event)" style="color: whitesmoke"/>
+  </div>
+  <p></p>
+  <button onclick="submitName()" style="color: #977A43">Öffnen</button>
+</div>
+
+<div class="centered-block">
+  <p id="error-message" style="display: none; color: #977A43; font-family: 'Arapey', serif; margin-top: 1rem;">
+  Fehler. Bitte kontaktiere Mimi oder Niko.
+  </p>
+</div>
+
+<div class="spacer"></div>
+
+<footer class="page-footer">
+  <div class="footer-left">
+    <img src="pictures/leftCorner.png" alt="Logo">
+  </div>
+  <div class="footer-center">
+    <p>&copy; 2026 Mimi & Niko – Wir freuen uns auf euch.</p>
+  </div>
+</footer>
+
+</body>
+
+<script>
+  // If the user went through landing.html, redirect them
+  const group = localStorage.getItem('group');
+  if (group) {
+    window.location.href = `main.html?gst=${group}`; //
+  }
+
+  // New data structure with tuples
+  const groups = {
+    // ToVaRi Groups
+    TVRi: [
+      ['elisabeth', 'arras'], ['stefan', 'arras'],
+      ['pia', 'arras'], ['pieter', 'kleinmann'],
+      ['ilka', 'arras'], ['andre', 'sinema'],
+      ['therese', 'gnott'],
+      ['tina', 'gnott'], ['oli', 'roth'], ['martina', 'gnott'], ['oliver', 'roth'],
+      ['jens', 'paar'], ['selina', 'paar']
+    ],
+    TVRp: [['tvr', 'p']],
+    TVRc: [['tvr', 'c']],
+    TVRa: [['marie', 'gnott'], ['niko', 'arras']],
+
+    // Sopra Groups
+    SOPp: [['sop', 'p']],
+    SOPa: [['sop', 'a']],
+
+    // Cardeto Groups
+    CDOp: [['cdo', 'p']],
+    CDOa: [['cdo', 'a']],
+
+    // Self Booker Groups
+    SBK: [['sbk', 'n'], ['björn', 'dornbusch'], ['stefan', 'gramlich']],
+    SBKie: [['sbk', 'ie']],
+    SBKim: [['sbk', 'im']],
+    SBKic: [['sbk', 'ic']],
+    SBKe: [['sbk', 'e']],
+  };
+
+  function submitName() {
+    const vornameInput = document.getElementById('vorname');
+    const nachnameInput = document.getElementById('nachname');
+    const lastNameContainer = document.getElementById('last-name-container');
+    const errorMessage = document.getElementById('error-message');
+
+    const vorname = vornameInput.value.trim().toLowerCase();
+    const nachname = nachnameInput.value.trim().toLowerCase();
+
+    // Check if the first name is empty
+    if (vorname === '') {
+      errorMessage.textContent = 'Bitte gib deinen Vornamen ein.';
+      errorMessage.style.display = 'block';
+      return;
+    }
+
+    let firstNames = [];
+    for (const group of Object.values(groups)) {
+      for (const nameTuple of group) {
+        firstNames.push(nameTuple[0]);
+      }
+    }
+
+    const matchingNames = Object.values(groups).flat().filter(tuple => tuple[0] === vorname);
+
+    // Case 1: Multiple first names match
+    if (matchingNames.length > 1) {
+      if (lastNameContainer.style.display === 'none') {
+        lastNameContainer.style.display = 'block';
+        errorMessage.textContent = ' ';
+        errorMessage.style.display = 'block';
+        return;
+      }
+
+      // Case 2: Matching with last name
+      const fullMatch = matchingNames.find(tuple => tuple[1] === nachname);
+      if (fullMatch) {
+        const groupKey = Object.keys(groups).find(key => groups[key].includes(fullMatch));
+        if (groupKey) {
+          localStorage.setItem('name', `${vorname} ${nachname}`);
+          localStorage.setItem('group', groupKey);
+          window.location.href = `main.html?gst=${groupKey}`;
+        }
+      } else {
+        errorMessage.textContent = 'Fehler. Bitte kontaktiere Mimi oder Niko.';
+        errorMessage.style.display = 'block';
+      }
+    }
+    // Case 3: Single first name match
+    else if (matchingNames.length === 1) {
+      const groupKey = Object.keys(groups).find(key => groups[key].includes(matchingNames[0]));
+      if (groupKey) {
+        localStorage.setItem('name', `${vorname} ${matchingNames[0][1]}`);
+        localStorage.setItem('group', groupKey);
+        window.location.href = `main.html?gst=${groupKey}`;
+      }
+    }
+    // Case 4: No match at all
+    else {
+      errorMessage.textContent = 'Fehler. Bitte kontaktiere Mimi oder Niko.';
+      errorMessage.style.display = 'block';
+    }
+  }
+
+  function handleKeyPress(event) {
+    if (event.key === "Enter" || event.keyCode === 13) {
+      submitName();
+    }
+  }
+</script>
+</html>

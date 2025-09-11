@@ -141,6 +141,16 @@ header p {
     height: auto;
 }
 
+.shuttle-image {
+    text-align: center; /* Bild zentrieren */
+    margin: 2rem 0;       /* Abstand nach oben/unten */
+}
+
+.shuttle-image img {
+    max-width: 90%;  /* Größe anpassen */
+    height: auto;
+}
+
 section {
     max-width: 700px;
     margin: 2em auto;

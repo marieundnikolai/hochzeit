@@ -136,6 +136,12 @@ header p {
     margin: 40px 0;     /* Abstand nach oben/unten */
 }
 
+.header-image {
+    text-align: center; /* Bild zentrieren */
+    margin: 10px 0;     /* Abstand nach oben/unten */
+    width: 10px;
+}
+
 .chapter-image img {
     width: 200px;  /* Größe anpassen */
     height: auto;

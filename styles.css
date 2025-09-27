@@ -137,9 +137,8 @@ header p {
 }
 
 .header-image {
-    text-align: center; /* Bild zentrieren */
-    margin: 10px 0;     /* Abstand nach oben/unten */
-    width: 20px;
+    width: 20px;  /* Größe anpassen */
+    height: auto;
 }
 
 .chapter-image img {

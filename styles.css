@@ -139,7 +139,7 @@ header p {
 .header-image {
     text-align: center; /* Bild zentrieren */
     margin: 10px 0;     /* Abstand nach oben/unten */
-    width: 10px;
+    width: 1px;
 }
 
 .chapter-image img {

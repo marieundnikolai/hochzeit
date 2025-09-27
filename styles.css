@@ -136,13 +136,18 @@ header p {
     margin: 40px 0;     /* Abstand nach oben/unten */
 }
 
-.header-image {
-    width: 20px;  /* Größe anpassen */
+.chapter-image img {
+    width: 200px;  /* Größe anpassen */
     height: auto;
 }
 
-.chapter-image img {
-    width: 200px;  /* Größe anpassen */
+.header-image {
+    text-align: center; /* Bild zentrieren */
+    margin: 20px 0;     /* Abstand nach oben/unten */
+}
+
+.header-image img {
+    width: 20px;  /* Größe anpassen */
     height: auto;
 }
 

@@ -143,11 +143,11 @@ header p {
 
 .header-image {
     text-align: center; /* Bild zentrieren */
-    margin: 20px 0;     /* Abstand nach oben/unten */
+    margin: 40px 0;     /* Abstand nach oben/unten */
 }
 
 .header-image img {
-    width: 20px;  /* Größe anpassen */
+    width: 40px;  /* Größe anpassen */
     height: auto;
 }
 

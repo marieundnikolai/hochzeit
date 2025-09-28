@@ -455,6 +455,12 @@ ul.timeline li::before {
         max-width: 350px; /* Prevent cards from getting too wide */
         margin-bottom: 20px; /* Add space between stacked cards */
     }
+
+    .header-right img {
+        width: 100px;   /* Größe anpassen */
+        height: auto;
+    }
+    
 }
 
 /* Optional: Further refine for very small screens if needed */

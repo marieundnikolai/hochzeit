@@ -23,6 +23,14 @@ footer {
     /* Other styles for your section can go here if needed. */
 }
 
+a {
+      color: #977A43;       /* text color */
+      font-weight: bold;    /* bold text */
+}
+a:hover {
+      color: white;        /* color when hovering */
+}
+
 .container {
     max-width: 600px;
     margin: auto;

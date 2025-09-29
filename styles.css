@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: 'Arapey', 'Arapey-Regular', serif;
+    font-size: 1.2em;
     background-color: #F5DED6;
     color: #977A43;
     margin: 0;
@@ -24,11 +25,11 @@ footer {
 }
 
 a {
-      color: #977A43;       /* text color */
-      font-weight: bold;    /* bold text */
+    color: #977A43;       /* text color */
+    font-weight: bold;    /* bold text */
 }
 a:hover {
-      color: white;        /* color when hovering */
+    color: white;        /* color when hovering */
 }
 
 .container {
@@ -170,7 +171,7 @@ header p {
 }
 
 section {
-    max-width: 700px;
+    max-width: 900px;
     margin: 2em auto;
     padding: 0 1em;
 }
@@ -225,7 +226,7 @@ section {
     font-family: 'Arapey', 'Arapey-Regular', serif;
     color: #977A43;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding-top: 2px;
 }
 
@@ -260,7 +261,7 @@ section {
     position: absolute;
     left: 11px; /* Adjust to align with the center of the bullet */
     top: 16px; /* Start below the current bullet */
-    bottom: -54px; /* Extend below to connect to the next bullet's top */
+    bottom: -58px; /* Extend below to connect to the next bullet's top */
     width: 2px;
     background-color: whitesmoke;
     z-index: 0; /* Place behind the bullets */
@@ -406,7 +407,7 @@ ul.timeline li::before {
     display: flex;
     align-items: center;
     gap: 10px; /* Abstand zwischen Text und Bild */
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Arapey', 'Arapey-Regular', serif;
     color: #977A43;
     padding-left: 0.5rem;
@@ -460,16 +461,25 @@ ul.timeline li::before {
         width: 100px;   /* Größe anpassen */
         height: auto;
     }
-    
+
 }
 
 /* Optional: Further refine for very small screens if needed */
-@media (max-width: 400px) {
+@media (max-width: 397px) {
     .person-card {
         padding: 15px;
     }
     .person-name {
         font-size: 1.5em;
+    }
+    .timeline-group .timeline-item:not(:last-child)::after {
+        bottom: -78px; /* Extend below to connect to the next bullet's top */
+    }
+}
+
+@media (max-width: 338px) {
+    .timeline-group .timeline-item:not(:last-child)::after {
+        bottom: -89px; /* Extend below to connect to the next bullet's top */
     }
 }
 

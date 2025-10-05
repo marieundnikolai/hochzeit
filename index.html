@@ -77,7 +77,7 @@
       ['pia', 'arras'], ['pieter', 'kindermans'], ['pieter-jan', 'kindermans'],
       ['ansi', 'bernard'], ['tobias', 'sedlmeier'], ['anne-sophie', 'bernard'], ['tobi', 'sedlmeier'],
       [],
-      ['nikolai'],['arras'], ['marie'],['gnott'], ['niko'],['arras'], ['mimi'],['gnott'],
+      ['nikolai', 'arras'], ['marie', 'gnott'], ['niko', 'arras'], ['mimi', 'gnott'],
       ['ilka', 'arras'], ['andre', 'sinnema'],
       ['carsten', 'jerke'], ['julia', 'jerke'],
       ['nils', 'richrath'], ['marie', 'gottowik'], ['Luisa', 'nogga'], ['leon', 'manitz'],  ['lulu', 'nogga'],
@@ -127,6 +127,7 @@
     const nachnameInput = document.getElementById('nachname');
     const lastNameContainer = document.getElementById('last-name-container');
     const errorMessage = document.getElementById('error-message');
+    const greeting = document.getElementById('greeting');
 
     const vorname = vornameInput.value.trim().toLowerCase();
     const nachname = nachnameInput.value.trim().toLowerCase();
@@ -145,7 +146,7 @@
       }
     }
 
-    const matchingNames = Object.values(groups).flat().filter(tuple => tuple[0] === vorname);
+    const matchingNames = Object.values(groups).flat().filter(t => (t && (t[0] || '')).toLowerCase() === vorname);
 
     // Case 1: Multiple first names match
     if (matchingNames.length > 1) {
@@ -158,7 +159,7 @@
       }
 
       // Case 2: Matching with last name
-      const fullMatch = matchingNames.find(tuple => tuple[1] === nachname);
+      const fullMatch = matchingNames.find(t => (t[1] || '').toLowerCase() === nachname);
       if (fullMatch) {
         const groupKey = Object.keys(groups).find(key => groups[key].includes(fullMatch));
         if (groupKey) {

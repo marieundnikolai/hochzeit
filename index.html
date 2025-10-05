@@ -19,10 +19,17 @@
 </header>
 <div class="container">
   <p>Bitte gib deinen Vornamen ein.</p>
-  <input type="text" id="vorname" placeholder="Dein Vorname" onkeydown="handleKeyPress(event)" style="color: whitesmoke"/>
+  <input
+          type="text"
+          id="vorname"
+          placeholder="Dein Vorname"
+          style="color: whitesmoke"
+          onkeydown="if(event.key==='Enter'){document.getElementById('greeting').textContent=`Hallo ${this.value.trim()}, bitte gib auch deinen Nachnamen ein:`;document.getElementById('last-name-container').style.display='block';}"
+  />
   <div id="last-name-container" style="display: none;">
-    <p>Bitte gib auch auch deinen Nachnamen ein:</p>
+    <p id="greeting"></p>
     <input type="text" id="nachname" placeholder="Dein Nachname" onkeydown="handleKeyPress(event)" style="color: whitesmoke"/>
+
   </div>
   <p></p>
   <button onclick="submitName()" style="color: #977A43">Öffnen</button>
@@ -30,7 +37,7 @@
 
 <div class="centered-block">
   <p id="error-message" style="display: none; color: #977A43; font-family: 'Arapey', serif; margin-top: 1rem;">
-  Fehler. Bitte kontaktiere Mimi oder Niko.
+    Fehler. Bitte kontaktiere Mimi oder Niko.
   </p>
 </div>
 
@@ -58,27 +65,57 @@
   const groups = {
     // ToVaRi Groups
     TVRi: [
-      ['elisabeth', 'arras'], ['stefan', 'arras'],
-      ['pia', 'arras'], ['pieter', 'kleinmann'],
-      ['ilka', 'arras'], ['andre', 'sinema'],
-      ['therese', 'gnott'],
-      ['tina', 'gnott'], ['oli', 'roth'], ['martina', 'gnott'], ['oliver', 'roth'],
-      ['jens', 'paar'], ['selina', 'paar']
+            ['test', 'tovari'],
+            ['elisabeth', 'arras'], ['stefan', 'arras'],
+            ['martina', 'roth'], ['oliver', 'roth'], ['tina', 'roth'], ['oli', 'roth'],
+            ['jens', 'paar'], ['selina', 'paar'], ['seli', 'paar'],
+            ['andreas', 'biegaj'], ['andy', 'biegaj'],
+            ['sandra', 'deutz'], ['thomas', 'kazala'], ['thomek', 'kazala'],
+            ['leona', 'bahn'], ['sebastian', 'schaumann'], ['schaumann', 'schaumann'],
+            ['patty', 'dittkens'], ['patrizia', 'dittkens'],
+            ['frauke', 'frauke'],
+            ['pia', 'arras'], ['pieter', 'kindermans'], ['pieter-jan', 'kindermans'],
+            ['ansi', 'bernard'], ['tobias', 'sedlmeier'], ['anne-sophie', 'bernard'], ['tobi', 'sedlmeier'],
+            [],
+            ['nikolai'],['arras'], ['marie'],['gnott'], ['niko'],['arras'], ['mimi'],['gnott'],
+            ['ilka', 'arras'], ['andre', 'sinnema'],
+            ['carsten', 'jerke'], ['julia', 'jerke'],
+            ['nils', 'richrath'], ['marie', 'gottowik'], ['Luisa', 'nogga'], ['leon', 'manitz'],  ['lulu', 'nogga'],
+            ['laura'],['szemkus'], ['tobias'],['szemkus'], ['tobi'],['szemkus'],
+            ['niklas', 'nieswand'], ['nikki', 'nieswand'], ['niki', 'nieswand'],
     ],
     TVRp: [['tvr', 'p']],
     TVRc: [['tvr', 'c']],
     TVRa: [['marie', 'gnott'], ['niko', 'arras']],
 
     // Sopra Groups
-    SOPp: [['sopra', 'p']],
+    SOPp: [ ['test', 'sopra'],
+            ['suraj', 'shetty'],
+            ['ben', 'keil'],
+            ['alexander', 'otto'], ['alex', 'otto'],
+            ['serkan', 'aygültekiin'],
+            ['hendrik', 'reents'],
+            ['michael', 'keck'],
+            ['fabienne', 'walter'], ['moritz', 'zimmermann'], ['fabi', 'walter']
+    ],
     SOPa: [['sop', 'a']],
 
     // Cardeto Groups
-    CDOp: [['cardeto', 'p']],
+    CDOp: [
+            ['test', 'cardeto'],
+            ['therese', 'gnott'],
+            ['monika', 'manderla'], ['moni', 'manderla'],
+            ['dora', 'kazala'], ['jendrek', 'kazala'],
+            ['alicia', 'fertsch'], ['lukas', 'fertsch'], ['lucas', 'fertsch'],
+            ['irene', 'goretzki'], ['günther', 'goretzki'],
+            ['marek', 'manderla'],
+    ],
     CDOa: [['cdo', 'a']],
 
     // Self Booker Groups
-    SBK: [['selbstbucher', 'n'], ['björn', 'dornbusch'], ['stefan', 'gramlich'], ['ilka', 'möller'], ['kevin', 'thiel'], ['anna', 'becker']],
+    SBK: [
+            ['test', 'selbstbucher'],
+            ['selbstbucher', 'n'], ['björn', 'dornbusch'], ['stefan', 'gramlich'], ['ilka', 'möller']],
     SBKie: [['sbk', 'ie']],
     SBKim: [['sbk', 'im']],
     SBKic: [['sbk', 'ic']],

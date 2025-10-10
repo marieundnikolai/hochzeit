@@ -462,6 +462,11 @@ ul.timeline li::before {
         height: auto;
     }
 
+    .footer-left img {
+        width: 100px;   /* Größe anpassen */
+        height: auto;
+    }
+
 }
 
 /* Optional: Further refine for very small screens if needed */

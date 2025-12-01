@@ -35,14 +35,16 @@ const groups = {
     // Sopra Groups
     SOPp: [ ['test', 'sopra'],
         ['suraj', 'shetty'],
-        ['ben', 'keil'],
         ['alexander', 'otto'], ['alex', 'otto'],
+        ['fabienne', 'walter'], ['moritz', 'zimmermann'], ['fabi', 'walter']
+    ],
+    SOPa: [
+        ['sop', 'a'],
+        ['ben', 'keil'],
         ['serkan', 'aygültekiin'],
         ['hendrik', 'reents'],
         ['michael', 'keck'],
-        ['fabienne', 'walter'], ['moritz', 'zimmermann'], ['fabi', 'walter']
     ],
-    SOPa: [['sop', 'a']],
 
     // Cardeto Groups
     CDOp: [

@@ -229,22 +229,22 @@
 
 <section id="Shuttle">
     <h2 class="section-title">Shuttle</h2>
-    <div id="TVRi" class="hidden">
+    <div id="TVRi" class="hiddenS">
         <div class="centered-block">
             <p>Da ihr direkt an der Unterkunft unterkommt, könnt ihr diese Sektion überspringen.</p>
         </div>
     </div>
-    <div id="TVRc" class="hidden">
+    <div id="TVRc" class="hiddenS">
         <div class="centered-block">
             <p>Da ihr direkt an der Unterkunft unterkommt, könnt ihr diese Sektion überspringen.</p>
         </div>
     </div>
-    <div id="TVRa" class="hidden">
+    <div id="TVRa" class="hiddenS">
         <div class="centered-block">
             <p>Da ihr direkt an der Unterkunft unterkommt, könnt ihr diese Sektion überspringen.</p>
         </div>
     </div>
-    <div id="SOPi" class="hidden">
+    <div id="SOPi" class="hiddenS">
         <div class="centered-block">
             <p>Damit wir alle sorgenfrei feiern können, haben wir für den Freitag einen Shuttle zwischen eurer Unterkunft und der Location organisiert, der euch zur Hochzeitslocation und Nachts wieder zurück bringt.</p>
             <p>Ponte Alla Piera liegt an der SP57, etwa 15 bis 20 Minuten nördlich, Palazzo am Arm der SP47 etwa 15 Minuten südlich der Hochzeitslocation. Alle von uns reservierten Unterkünfte befinden sich innerhalb des Radius.</p>
@@ -255,7 +255,7 @@
             <img src="pictures/Screenshot 2025-09-29 at 18.17.18.png" alt="Blume">
         </div>
     </div>
-    <div id="SOPa" class="hidden">
+    <div id="SOPa" class="hiddenS">
         <div class="centered-block">
             <p>Damit wir alle sorgenfrei feiern können, haben wir für den Freitag einen Shuttle zwischen eurer Unterkunft und der Location organisiert, der euch zur Hochzeitslocation und Nachts wieder zurück bringt.</p>
             <p>Ponte Alla Piera liegt an der SP57, etwa 15 bis 20 Minuten nördlich, Palazzo am Arm der SP47 etwa 15 Minuten südlich der Hochzeitslocation. Alle von uns reservierten Unterkünfte befinden sich innerhalb des Radius.</p>
@@ -266,7 +266,7 @@
             <img src="pictures/Screenshot 2025-09-29 at 18.17.18.png" alt="Blume">
         </div>
     </div>
-    <div id="CDOi" class="hidden">
+    <div id="CDOi" class="hiddenS">
         <div class="centered-block">
             <p>Damit wir alle sorgenfrei feiern können, haben wir für den Freitag einen Shuttle zwischen eurer Unterkunft und der Location organisiert, der euch zur Hochzeitslocation und Nachts wieder zurück bringt.</p>
             <p>Ponte Alla Piera liegt an der SP57, etwa 15 bis 20 Minuten nördlich, Palazzo am Arm der SP47 etwa 15 Minuten südlich der Hochzeitslocation. Alle von uns reservierten Unterkünfte befinden sich innerhalb des Radius.</p>
@@ -277,7 +277,7 @@
             <img src="pictures/Screenshot 2025-09-29 at 18.17.18.png" alt="Blume">
         </div>
     </div>
-    <div id="CDOa" class="hidden">
+    <div id="CDOa" class="hiddenS">
         <div class="centered-block">
             <p>Damit wir alle sorgenfrei feiern können, haben wir für den Freitag einen Shuttle zwischen eurer Unterkunft und der Location organisiert, der euch zur Hochzeitslocation und Nachts wieder zurück bringt.</p>
             <p>Ponte Alla Piera liegt an der SP57, etwa 15 bis 20 Minuten nördlich, Palazzo am Arm der SP47 etwa 15 Minuten südlich der Hochzeitslocation. Alle von uns reservierten Unterkünfte befinden sich innerhalb des Radius.</p>
@@ -288,7 +288,7 @@
             <img src="pictures/Screenshot 2025-09-29 at 18.17.18.png" alt="Blume">
         </div>
     </div>
-    <div id="SBK" class="hidden">
+    <div id="SBK" class="hiddenS">
         <div class="centered-block">
             <p>Damit wir alle sorgenfrei feiern können, haben wir für den Freitag einen Shuttle entlang der SP47 & SP57 zwischen Ponte Alla Piera und Palazzo organisiert, der euch zur Hochzeitslocation und Nachts wieder zurück bringt.</p>
             <p>Ponte Alla Piera liegt an der SP57, etwa 15 bis 20 Minuten nördlich, Palazzo am Arm der SP47 etwa 15 Minuten südlich der Hochzeitslocation. Alle von uns reservierten Unterkünfte befinden sich innerhalb des Radius.</p>
@@ -409,6 +409,7 @@
         const el = document.getElementById(guestGroup);
         if (el) {
             el.classList.remove('hidden');
+            el.classList.remove('hiddenS');
         }
     }
 </script>

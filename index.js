@@ -83,6 +83,9 @@
         ['jenny', 'schumacher'],
         ['frauke', ''],
     ],
+    SBKa: [
+      ['sbk', 'a']
+    ],
     SBKie: [['sbk', 'ie']],
     SBKim: [['sbk', 'im']],
     SBKic: [['sbk', 'ic']],

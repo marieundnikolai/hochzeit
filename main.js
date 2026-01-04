@@ -16,7 +16,7 @@ const validGroups = [
     'TVRi', 'TVRp', 'TVRc', 'TVRa',
     'SOPi', 'SOPp', 'SOPa',
     'CDOi', 'CDOp', 'CDOa',
-    'SBK', 'SBKie', 'SBKim', 'SBKic', 'SBKe'
+    'SBK', 'SBKa', 'SBKie', 'SBKim', 'SBKic', 'SBKe'
 ];
 
 if (validGroups.includes(activeGroup)) {

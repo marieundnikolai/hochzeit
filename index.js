@@ -8,8 +8,14 @@
   const groups = {
     // ToVaRi Groups
     TVRi: [
-
-        ['test', 'tovari'],
+      ['tvr', 'i'],
+    ],
+    TVRc: [
+        ['laura'],['szemkus'], ['tobias'],['szemkus'], ['tobi'],['szemkus'],
+        ['niklas', 'nieswand'], ['nikki', 'nieswand'], ['niki', 'nieswand'],
+    ],
+    TVRa: [
+        ['tvr', 'a'],
         ['elisabeth', 'arras'], ['stefan', 'arras'],
         ['martina', 'roth'], ['oliver', 'roth'], ['tina', 'roth'], ['oli', 'roth'],
         ['jens', 'paar'], ['selina', 'paar'], ['seli', 'paar'],
@@ -25,16 +31,11 @@
         ['patty', 'dittkens'], ['patrizia', 'dittkens'],
         ['ansi', 'bernard'], ['tobias', 'sedlmeier'], ['anne-sophie', 'bernard'], ['tobi', 'sedlmeier'],
         ['nils', 'richrath'], ['marie', 'gottowik'], ['Luisa', 'nogga'], ['leon', 'manitz'],  ['lulu', 'nogga'],
-
     ],
-    TVRc: [
-        ['laura'],['szemkus'], ['tobias'],['szemkus'], ['tobi'],['szemkus'],
-        ['niklas', 'nieswand'], ['nikki', 'nieswand'], ['niki', 'nieswand'],
-    ],
-    TVRa: [],
 
     // Sopra Groups
-    SOPi: [ ['test', 'sopra'],
+    SOPi: [ 
+      ['sop', 'i'],
       ['suraj', 'shetty'],
       ['ben', 'keil'],
       ['alexander', 'otto'], ['alex', 'otto'],
@@ -43,23 +44,27 @@
       ['michael', 'keck'],
       ['fabienne', 'walter'], ['moritz', 'zimmermann'], ['fabi', 'walter']
     ],
-    SOPa: [['sop', 'a']],
+    SOPa: [
+      ['sop', 'a']
+    ],
 
     // Cardeto Groups
     CDOi: [
-      ['test', 'cardeto'],
-      ['therese', 'gnott'],
-      ['monika', 'manderla'], ['moni', 'manderla'],
-      ['dora', 'kazala'], ['jendrek', 'kazala'],
+      ['cdo', 'i'],
       ['alicia', 'fertsch'], ['lukas', 'fertsch'], ['lucas', 'fertsch'],
       ['irene', 'goretzki'], ['günther', 'goretzki'],
       ['marek', 'manderla'],
     ],
-    CDOa: [['cdo', 'a']],
+    CDOa: [
+      ['cdo', 'a'],
+      ['therese', 'gnott'],
+      ['monika', 'manderla'], ['moni', 'manderla'],
+      ['dora', 'kazala'], ['jendrek', 'kazala'],
+    ],
 
     // Self Booker Groups
     SBK: [
-        ['test', 'selbstbucher'],
+        ['sbk', 'i'],
         ['ewelina','sarnecka'], ['anton','pfeiffer'],
         ['björn','dornbusch'], ['marc','meyer'],
         ['jupp','lukoschek'], ['bozena','lukoschek'],

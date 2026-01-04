@@ -1,24 +1,31 @@
-//const name = localStorage.getItem('name');
-const group = localStorage.getItem('group');
+// const name = localStorage.getItem('name');
+const storedGroup = localStorage.getItem('group');
 
 // If the user hasn't gone through landing.html, redirect them
-if (!group || group === 'none') {
-    window.location.href = 'index.html'; // or 'landing.html' if that's the name
+if (!storedGroup || storedGroup === 'none') {
+    window.location.href = 'index.html';
 }
 
 const params = new URLSearchParams(window.location.search);
 const guestGroup = params.get('gst');
 
+// Use URL param if present, otherwise fallback to localStorage
+const activeGroup = guestGroup || storedGroup;
+
 const validGroups = [
     'TVRi', 'TVRp', 'TVRc', 'TVRa',
-    'SOPp', 'SOPa',
-    'CDOp', 'CDOa',
+    'SOPi', 'SOPp', 'SOPa',
+    'CDOi', 'CDOp', 'CDOa',
     'SBK', 'SBKie', 'SBKim', 'SBKic', 'SBKe'
-]; // Add more groups here as needed
+];
 
-if (validGroups.includes(guestGroup)) {
-    const el = document.getElementById(guestGroup);
-    if (el) {
-        el.classList.remove('hidden');
-    }
+if (validGroups.includes(activeGroup)) {
+    document.querySelectorAll('[data-groups]').forEach(el => {
+        const groups = (el.dataset.groups || '').split(/\s+/); // "SOPi SOPp SOPa"
+        if (groups.includes(activeGroup)) {
+            el.classList.remove('hidden');
+        }
+    });
+} else {
+    window.location.href = 'index.html';
 }

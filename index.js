@@ -8,14 +8,15 @@
   const groups = {
     // ToVaRi Groups
     TVRi: [
-      ['tvr', 'i'],
+      ['tovari', 'invite'], ['tvr', 'i'],
     ],
     TVRc: [
+        ['tvr', 'c'], ['tovari', 'camper'],
         ['laura'],['szemkus'], ['tobias'],['szemkus'], ['tobi'],['szemkus'],
         ['niklas', 'nieswand'], ['nikki', 'nieswand'], ['niki', 'nieswand'],
     ],
     TVRa: [
-        ['tvr', 'a'],
+        ['tvr', 'a'], ['tovari', 'accept'],
         ['elisabeth', 'arras'], ['stefan', 'arras'],
         ['martina', 'roth'], ['oliver', 'roth'], ['tina', 'roth'], ['oli', 'roth'],
         ['jens', 'paar'], ['selina', 'paar'], ['seli', 'paar'],
@@ -35,7 +36,7 @@
 
     // Sopra Groups
     SOPi: [ 
-      ['sop', 'i'],
+      ['sop', 'i'], ['sopra', 'invite'],
       ['suraj', 'shetty'],
       ['ben', 'keil'],
       ['alexander', 'otto'], ['alex', 'otto'],
@@ -45,18 +46,18 @@
       ['fabienne', 'walter'], ['moritz', 'zimmermann'], ['fabi', 'walter']
     ],
     SOPa: [
-      ['sop', 'a']
+      ['sop', 'a'], ['sopra', 'accept']
     ],
 
     // Cardeto Groups
     CDOi: [
-      ['cdo', 'i'],
+      ['cdo', 'i'], ['cardeto', 'invite'],
       ['alicia', 'fertsch'], ['lukas', 'fertsch'], ['lucas', 'fertsch'],
       ['irene', 'goretzki'], ['günther', 'goretzki'],
       ['marek', 'manderla'],
     ],
     CDOa: [
-      ['cdo', 'a'],
+      ['cdo', 'a'], ['cardeto', 'accept'],
       ['therese', 'gnott'],
       ['monika', 'manderla'], ['moni', 'manderla'],
       ['dora', 'kazala'], ['jendrek', 'kazala'],
@@ -64,7 +65,7 @@
 
     // Self Booker Groups
     SBK: [
-        ['sbk', 'i'],
+        ['sbk', 'i'], ['selbstbucher', 'invite'], ['selfbooker', 'invite'],
         ['ewelina','sarnecka'], ['anton','pfeiffer'],
         ['björn','dornbusch'], ['marc','meyer'],
         ['jupp','lukoschek'], ['bozena','lukoschek'],
@@ -89,7 +90,7 @@
         ['frauke', ''],
     ],
     SBKa: [
-      ['sbk', 'a']
+      ['sbk', 'a'], ['selbstbucher', 'accept'], ['selfbooker', 'accept'],
     ],
     SBKie: [['sbk', 'ie']],
     SBKim: [['sbk', 'im']],

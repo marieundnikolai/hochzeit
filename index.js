@@ -88,6 +88,7 @@
         ['robin', 'lugt'], ['melanie',''],
         ['jenny', 'schumacher'],
         ['frauke', ''],
+        ['selina', 'weindorf'], ['esther','heidner'], ['kathrin', 'liebhardt'], ['jenny','myzev'], ['jennifer','myzev'],
     ],
     SBKa: [
       ['sbk', 'a'], ['selbstbucher', 'accept'], ['selfbooker', 'accept'],

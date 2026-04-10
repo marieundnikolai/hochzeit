@@ -37,12 +37,10 @@
     // Sopra Groups
     SOPi: [ 
       ['sop', 'i'], ['sopra', 'invite'],
-      ['ben', 'keil'],
     ],
     SOPa: [
       ['sop', 'a'], ['sopra', 'accept'],
       ['suraj', 'shetty'],
-      ['alexander', 'otto'], ['alex', 'otto'],
       ['serkan', 'aygültekiin'],
       ['hendrik', 'reents'],
       ['michael', 'keck'],
@@ -54,7 +52,6 @@
       ['cdo', 'i'], ['cardeto', 'invite'],
       
       ['günther', 'goretzki'],
-      ['marek', 'manderla'],
     ],
     CDOa: [
       ['cdo', 'a'], ['cardeto', 'accept'],
@@ -69,13 +66,6 @@
     SBK: [
         ['sbk', 'i'], ['selbstbucher', 'invite'], ['selfbooker', 'invite'],
         ['björn','dornbusch'], ['marc','meyer'],
-        ['jupp','lukoschek'], ['bozena','lukoschek'],
-        ['steffi','biegaj-rummler'], ['jochen','rummler'], ['stefanie','biegaj-rummler'],
-        ['lars','lukoschek'], ['nina','dettmer'], ['lucas','lukoschek'], ['lars lucas','lukoschek'],
-        ['denis', 'polczyk'],
-        ['andre','polczyk'], ['dani',''], ['daniela',''],
-        ['daniel','gramlich'], ['ulrike','von dellemann'], ['ulli','von dellemann'], ['uli','von dellemann'],
-        ['jenny', 'schumacher'],
     ],
     SBKa: [
       ['sbk', 'a'], ['selbstbucher', 'accept'], ['selfbooker', 'accept'],
@@ -92,6 +82,7 @@
       ['nathanja',''], ['stefan','gramlich'], ['stefan','gramlich'],
       ['robin', 'lugt'], ['melanie',''],
       ['frauke', ''],
+      ['denis', 'polczyk'],
       ['jana','könekamp'], ['dennis','hierl'],
     ],
     SBKie: [['sbk', 'ie']],

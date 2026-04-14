@@ -442,6 +442,16 @@ ul.timeline li::before {
         height: 100px;
     }
 }
+
+.btn {
+  color: white;            
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: black; 
+}
+
 @media (max-width: 576px) { /* Or 576px, 480px, whatever you define as "mobile like iPhone" */
     .timeline-image-container {
         display: none;

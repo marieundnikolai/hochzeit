@@ -40,18 +40,16 @@
     ],
     SOPa: [
       ['sop', 'a'], ['sopra', 'accept'],
-      ['suraj', 'shetty'],
-      ['serkan', 'aygültekiin'],
-      ['hendrik', 'reents'],
-      ['michael', 'keck'],
+      ['suraj', 'shetty'], ['trish'],
+      ['serkan', 'aygültekiin'], ['sophia', ''],
+      ['hendrik', 'reents'], ['amira', ''], 
+      ['michael', 'keck'], ['lobke', ''], 
       ['fabienne', 'walter'], ['moritz', 'zimmermann'], ['fabi', 'walter']
     ],
 
     // Cardeto Groups
     CDOi: [
       ['cdo', 'i'], ['cardeto', 'invite'],
-      
-      ['günther', 'goretzki'],
     ],
     CDOa: [
       ['cdo', 'a'], ['cardeto', 'accept'],
@@ -59,7 +57,7 @@
       ['monika', 'manderla'], ['moni', 'manderla'],
       ['dora', 'kazala'], ['jendrek', 'kazala'],
       ['alicia', 'fertsch'], ['lukas', 'fertsch'], ['lucas', 'fertsch'],
-      ['irene', 'goretzki'],
+      ['irene', 'goretzki'], ['günther', 'goretzki'],
     ],
 
     // Self Booker Groups
